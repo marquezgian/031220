@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-03-12T03:57:27.864Z",
+    "end": "2020-03-12T03:57:53.461Z",
+    "duration": 25597,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "ce8b5f2e-d6b6-488f-8668-1ec38e5e20eb",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [
+      {
+        "title": "\"before all\" hook",
+        "fullTitle": "\"before all\" hook",
+        "timedOut": false,
+        "duration": 336,
+        "pass": false,
+        "fail": false,
+        "pending": false,
+        "code": "global.expect = expect;\nglobal.browser = await puppeteer.launch(opts);",
+        "err": {},
+        "isRoot": true,
+        "uuid": "d200459b-cb91-42ba-a9d4-52101175bc3e",
+        "isHook": true,
+        "skipped": false
+      }
+    ],
+    "afterHooks": [
+      {
+        "title": "\"after all\" hook",
+        "fullTitle": "\"after all\" hook",
+        "timedOut": false,
+        "duration": 198,
+        "pass": false,
+        "fail": false,
+        "pending": false,
+        "code": "browser.close();\nsetTimeout( () => { cmd.run('node server.js');}, 5000)\nsetTimeout(() => {opn('http://localhost:9988');}, 2000);\n // open('./mochawesome-report/mochawesome.html');\nglobal.browser = globalVariables.browser;\nglobal.expect = globalVariables.expect;",
+        "err": {},
+        "isRoot": true,
+        "uuid": "ec507398-8fe2-41da-9b85-59cc916dbdfa",
+        "isHook": true,
+        "skipped": false
+      }
+    ],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "4d6b4917-af21-4318-bcb9-ba3bc21bdf93",
+        "title": "simple test for fv main console",
+        "fullFile": "C:\\Users\\ITE Account\\Marquez\\031220\\puppeteer-mocha-automated-testing\\test\\sample.spec.js",
+        "file": "\\test\\sample.spec.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "simple test for fv main console \"before all\" hook",
+            "timedOut": false,
+            "duration": 5168,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "page = await browser.newPage();\nawait page.goto(\"https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin\");\nawait page.setViewport( { width: 1920, height: 1040} );",
+            "err": {},
+            "isRoot": false,
+            "uuid": "8d056001-d173-4e4c-bbb2-5673c7e4ba87",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook",
+            "fullTitle": "simple test for fv main console \"after all\" hook",
+            "timedOut": false,
+            "duration": 137,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "await page.close();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "7e977f9c-0b8c-4355-bb69-5c4871043741",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "should login to home page",
+            "fullTitle": "simple test for fv main console should login to home page",
+            "timedOut": false,
+            "duration": 19733,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const emailInput = \"#username\";\nconst passwordInput = \"#password\";\nconst submitSelector = \"#app__container > main > div >  form > div.login__form_action_container > button\";\n \n linkEmail = await page.$(emailInput);\n linkPassword = await page.$(passwordInput);\n linkSubmit = await page.$(submitSelector);\n await linkEmail.click({ clickCount: 3 });\n await linkEmail.type('ggulanes_180000000405@uic.edu.ph'); // add the email address for linkedin //\n await linkPassword.click({ clickCount: 3});\n await linkPassword.type('youGulanes'); // add password for linkedin account\n await linkSubmit.click();\n await page.waitForNavigation();\n await page.waitFor(3000);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "a0c7ab10-33e9-4eef-93f1-7c23b3b7b1e7",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "a0c7ab10-33e9-4eef-93f1-7c23b3b7b1e7"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 19733,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 0
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 0
+  },
+  "copyrightYear": 2020
+}
